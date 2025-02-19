@@ -13,7 +13,20 @@ public class Lab24d
 	public static void main( String args[] ) throws IOException
 	{
 		Scanner file = new Scanner (new File("lab24d.dat"));
+		int howMany = file.nextInt();
+		file.nextLine();
+		for(int i=0; i<howMany;i++)
+		{
+			TicTacToe game = new TicTacToe(file.nextLine());
+			game.getWinner();
+			System.out.println(game.getWinner());
+			System.out.println(game);
+			
+		}
+		
+		//tictactoe only wants this file.nextInt()
 
+		
 
 
 
