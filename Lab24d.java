@@ -23,7 +23,7 @@ public class Lab24d
 			System.out.println(game);
 			
 		}
-		
+		file.close();
 		//tictactoe only wants this file.nextInt()
 
 		

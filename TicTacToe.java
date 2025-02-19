@@ -82,11 +82,11 @@ public class TicTacToe
 	public String toString()
 	{
 		String output="";
-		for(int row=0; row<mat.length; row++)
+		for(char[] row: mat)
 		{
-			for(int col=0; col<mat[row].length;col++)
+			for(char col: row)
 			{
-				output+= mat[row][col];
+				output+= col;
 			}
 			output+= "\n";
 		}
