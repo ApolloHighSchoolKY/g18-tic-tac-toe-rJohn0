@@ -10,7 +10,7 @@ import static java.lang.System.*;
 public class TicTacToe
 {
 	private char[][] mat;
-
+	
 	public TicTacToe()
 	{
 		mat = new char[3][3];
@@ -43,40 +43,38 @@ public class TicTacToe
 
 	public String getWinner()
 	{
-		String winner = "";
+		char winner = 'e';
 		//horrizontal  start below
 		if(mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) {
-			winner = "" + mat[0][0] + " wins";
+			winner = mat[0][0];
 		
 		} else if (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) {
-			winner = "" + mat[1][0] + " wins";
+			winner = mat[1][0];
 		
 		} else if (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) {
-			winner = "" + mat[2][0] + " wins";
+			winner = mat[2][0];
 		//veritcal start below
 		} else if (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) {
-			winner = "" + mat[0][0] + " wins";
+			winner = mat[0][0] ;
 
 		} else if (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) {
-			winner = "" + mat[1][0] + " wins";
+			winner = mat[1][0];
 
 		} else if (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) {
-			winner = "" + mat[2][2] + " wins";
+			winner = mat[2][2];
 		// diagonal start below
 		} else if (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2])
 		{
-			winner = "" + mat[0][0] + " wins";
+			winner = mat[0][0];
 
 		} else if (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]) {
-			winner = "" + mat[2][0] + " wins";
+			winner = mat[2][0];
 		//tie
 		} else	{
-			winner = "tie! no one wins";
+			return "tie! no one wins";
 		}
 
-
-
-		return "" + winner;
+		return "" + winner + " wins";
 	}
 
 	public String toString()
